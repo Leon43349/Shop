@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<form method="post" action="Checkout">
+    <label for="Firstname">please enter your firstname (Your Fistname must have at least 3 letters and have to begin
+        with a capital letter.):</label>
+    <input class="form-control" name="Firstname" id="Firstname" pattern="[A-Z]{1}[a-z]{2,}" placeholder="Firstname" required="required">
+
+    <label for="Lastname">please enter your lastname (Your Lastname must have at least 3 letters and have to begin with
+        a capital letter.):</label>
+    <input class="form-control" name="Lastname" id="Lastname" pattern="[A-Z]{1}[a-z]{2,}" placeholder="Lastname" required="required">
+
+    <label for="Street">please enter your street (It have to be at least 3 letters and the first one have to be a
+        capital letter.):</label>
+    <input class="form-control" name="Street" id="Street" pattern="[A-Z]{1}[a-zA-Z ]{2,}" placeholder="Street" required="required">
+
+    <label for="Housenumber">please enter your housenumber (It have to be a number.):</label>
+    <input class="form-control" name="Housenumber" id="Housenumber" pattern="[0-9]{1,}" placeholder="Housenumber" required="required">
+
+    <label for="ZIPCode">please enter your ZIP code:</label>
+    <input class="form-control" name="ZIPCode" id="ZIPCode" pattern="[0-9]{5}" placeholder="ZIPCode" required="required">
+
+    <label for="City">please enter your city name (It have to be at least 3 letters and the first one have to be a
+        capital letter):</label>
+    <input class="form-control" name="City" id="City" pattern="[A-Z]{1}[a-z]{1,}" placeholder="City" required="required">
+
+    <label for="Cardowner">Who is the card owner (Please write your name in this format: Firstname Lastname):</label>
+    <input class="form-control" name="Cardowner" id="Cardowner" pattern="[A-Z]{1}[a-z]{2,} [A-Z]{1}[a-z]{2,}"
+           placeholder="Cardowner" required="required">
+
+    <label for="CreditCardNumber">please enter your card number("Please enter your cart number in this format: xxxx xxxx
+        xxxx xxxx"):</label>
+    <input class="CreditCardNumber" name="CreditCardNumber" id="CreditCardNumber"
+           pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" placeholder="CreditCardNumber" required="required">
+    <br>
+    <label for="CVV">please enter your CVV (The CVV must have exactly 3 numbers):</label>
+    <input class="form-control" name="CVV" id="CVV" pattern="[0-9]{3}" placeholder="CVV" required="required">
+
+    <label for="ValidUntilMonth">Until which month is your card valid (between 1-12):</label>
+    <input class="form-control" name="ValidUntilMonth" id="ValidUntilMonth" pattern="[1-12]{1,}"
+           placeholder="ValidUntilMonth" required="required">
+
+    <label for="ValidUntilYear">Until which year is your card valid(Have to be more than 2020.):</label>
+    <input class="form-control" name="ValidUntilYear" id="ValidUntilYear" pattern="[2020-30000]{1,}"
+           placeholder="ValidUntilYear" required="required">
+
+    <br>
+    <button class="btn btn-primary" type="submit">Checkout</button>
+</form>
+<form method="post" action="BackToMenu">
+    <button class="btn btn-primary" type="submit">Back to menu</button>
+</form>
+<form method="post" action="logout">
+    <button class="btn btn-primary" type="submit">Logout</button>
+</form>
+</body>
+</html>

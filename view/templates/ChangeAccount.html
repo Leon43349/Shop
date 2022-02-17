@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChangAccount</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+<body>
+<form method="post" action="ChangeAccount">
+    <label for="newfirstname">please enter your new Firstname(Your new Firstname must have at least 3 letters and have to begin with a capital letter.)</label>
+    <input class="form-control" name="newfirstname" id="newfirstname" pattern="[A-Z]{1}[a-z]{2,}" placeholder={{us.firstname}}>
+
+    <label for="newlastname">please enter your new Lastname(Your new Lastname must have at least 3 letters and have to begin with a capital letter.):</label>
+    <input class="form-control" name="newlastname" id="newlastname" pattern="[A-Z]{1}[a-z]{2,}" placeholder={{us.lastname}}>
+
+    <label for="newbirthday">please enter your new birthday:</label>
+    <input type="date" class="form-control" name="newbirthday" id="newbirthday" placeholder={{us.birthdate}}>
+
+    <label for="newusername">please enter your new username:</label>
+    <input class="form-control" name="newusername" id="newusername" placeholder={{us.username}}>
+
+    <label type="password" for="newpassword">please enter your new password(The password must contains at least 8 characters, one number and a capital letter.):</label>
+    <input class="form-control" name="newpassword" id="newpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder={{us.password}}>
+
+    <button class="btn btn-primary" type="submit" name="getUsername" value="{{us.username}}">change account</button>
+</form>
+
+<form method="post" action="BackToMenu">
+    <button class="btn btn-primary" type="submit">Back to menu</button>
+</form>
+<form method="post" action="logout">
+    <button class="btn btn-primary" type="submit">Logout</button>
+</form>
+</body>
+</html>
